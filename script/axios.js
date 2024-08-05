@@ -21,30 +21,21 @@ const button_form = document.querySelector('.button_form');
 click_here.addEventListener('click', () => {
     button_form.classList.toggle('button_form_nodis')
 })
-fetch("http://localhost:3000/toys")
-    .then(response => response.json())
-    .then(data =>{
-        data.forEach(item=>{
+axios.get('http://localhost:3000/toys')
+    .then(response => response.data.forEach(item=>{
             create_card(item)
-        })
-    })
+        }))
 const input_name = document.querySelector('.input_name');
 const input_img = document.querySelector('.input_img');
 const form = document.querySelector('.form');
 form.addEventListener('submit', event => {
     event.preventDefault();
-    fetch('http://localhost:3000/toys', {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify({
-            name: input_name.value,
-            image: input_img.value,
-            likes: 0
-        })
+    axios.post('http://localhost:3000/toys', {
+        name: input_name.value,
+        image: input_img.value,
+        likes: 0
     })
-    .then(responce => responce.json())
+        .then(response => response.data)
         .then(create_card)
     input_name.value = '';
     input_img.value = '';
@@ -54,29 +45,18 @@ card_container.addEventListener('click', event =>{
         const id_like = event.target.parentElement.dataset.id;
         const likes_counter = parseInt(event.target.textContent);
         event.target.textContent = `${likes_counter + 1} likes`;
-        fetch(`http://localhost:3000/toys/${id_like}`, {
-            method: "PATCH",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify({
-                likes: likes_counter + 1
-            })
+        axios.patch(`http://localhost:3000/toys/${id_like}`,{
+            likes: likes_counter + 1
         })
-            .then(response => response.json())
+            .then(response => response.data)
     }
 })
 card_container.addEventListener('click', event =>{
     if (event.target.className === 'button_delete'){
         const id_delete = event.target.parentElement.dataset.id;
-        fetch(`http://localhost:3000/toys/${id_delete}`, {
-            method: "DELETE",
-            headers: {
-                "Content-Type": "application/json"
-            }
-        })
+        axios.delete(`http://localhost:3000/toys/${id_delete}`)
             .then(response => {
-                if (response.ok){
+                if (response.status === 200){
                     event.target.parentElement.remove()
                 }
             })

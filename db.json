@@ -4,25 +4,25 @@
       "id": 1,
       "name": "C-3PO",
       "image": "https://www.pngmart.com/files/19/Lego-Star-Wars-Toys-PNG-Clipart.png",
-      "likes": 6
+      "likes": 11
     },
     {
       "id": 2,
       "name": "Leia Organa Solo",
       "image": "https://www.pngmart.com/files/19/Lego-Star-Wars-Toys-PNG-Image.png",
-      "likes": 3
+      "likes": 12
     },
     {
       "id": 3,
       "name": "Obi-Wan Kenobi",
       "image": "https://www.pngmart.com/files/19/Lego-Star-Wars-Toys-PNG-Photos.png",
-      "likes": 2
+      "likes": 5
     },
     {
       "id": 4,
       "name": "Luke Skywalker",
       "image": "https://www.pngmart.com/files/19/Lego-Star-Wars-Toys-Transparent-PNG.png",
-      "likes": 2
+      "likes": 5
     },
     {
       "id": 5,
