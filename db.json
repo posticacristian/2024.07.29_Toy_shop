@@ -1,0 +1,46 @@
+{
+  "toys": [
+    {
+      "id": 1,
+      "name": "C-3PO",
+      "image": "https://www.pngmart.com/files/19/Lego-Star-Wars-Toys-PNG-Clipart.png",
+      "likes": 1
+    },
+    {
+      "id": 2,
+      "name": "Leia Organa Solo",
+      "image": "https://www.pngmart.com/files/19/Lego-Star-Wars-Toys-PNG-Image.png",
+      "likes": 1
+    },
+    {
+      "id": 3,
+      "name": "Obi-Wan Kenobi",
+      "image": "https://www.pngmart.com/files/19/Lego-Star-Wars-Toys-PNG-Photos.png",
+      "likes": 1
+    },
+    {
+      "id": 4,
+      "name": "Luke Skywalker",
+      "image": "https://www.pngmart.com/files/19/Lego-Star-Wars-Toys-Transparent-PNG.png",
+      "likes": 1
+    },
+    {
+      "id": 5,
+      "name": "Ewok",
+      "image": "https://www.pngmart.com/files/19/Lego-Star-Wars-Toys-PNG-File.png",
+      "likes": 1
+    },
+    {
+      "name": "Stormtroopers",
+      "image": "https://www.pngmart.com/files/19/Lego-Star-Wars-Toys-PNG-Transparent-Image.png",
+      "likes": 1,
+      "id": 6
+    },
+    {
+      "name": "Stormtroopers",
+      "image": "https://www.pngmart.com/files/19/Lego-Star-Wars-Toys-PNG-Pic.png",
+      "likes": 1,
+      "id": 7
+    }
+  ]
+}
