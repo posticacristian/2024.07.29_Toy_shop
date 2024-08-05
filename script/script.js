@@ -73,6 +73,10 @@ card_container.addEventListener('click', event =>{
                 "Content-Type": "application/json"
             }
         })
-            .then(response => response.json())
+            .then(response => {
+                if (response.ok){
+                    event.target.parentElement.remove()
+                }
+            })
     }
 })
